@@ -23,12 +23,14 @@ const CTASection = () => (
           Não perca mais tempo com sites genéricos. Invista em uma presença digital que realmente
           transmite autoridade e gera resultados.
         </p>
-        <button
-          onClick={() => document.getElementById("contato")?.scrollIntoView({ behavior: "smooth" })}
-          className="neon-btn text-lg flex items-center gap-2 mx-auto"
+        <a
+          href={`https://wa.me/5521974977175?text=${encodeURIComponent("Olá! Gostaria de solicitar um orçamento para criação de site com a Patronix.")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="neon-btn text-lg inline-flex items-center gap-2 mx-auto"
         >
           Solicitar Orçamento <ArrowRight size={20} />
-        </button>
+        </a>
       </motion.div>
     </div>
   </section>
