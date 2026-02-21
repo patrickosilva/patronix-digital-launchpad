@@ -77,6 +77,9 @@ const lockedPlans: Plan[] = [
   },
 ];
 
+const getWhatsAppLink = (planName: string) =>
+  `https://wa.me/5521974977175?text=${encodeURIComponent(`Olá! Tenho interesse no plano ${planName} da Patronix. Gostaria de mais informações.`)}`;
+
 const PlanCard = ({ plan, index }: { plan: Plan; index: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -126,9 +129,9 @@ const PlanCard = ({ plan, index }: { plan: Plan; index: number }) => (
     </ul>
 
     {!plan.locked ? (
-      <button className={plan.featured ? "neon-btn w-full" : "neon-btn-outline w-full"}>
+      <a href={getWhatsAppLink(plan.name)} target="_blank" rel="noopener noreferrer" className={`block text-center ${plan.featured ? "neon-btn w-full" : "neon-btn-outline w-full"}`}>
         Quero este plano
-      </button>
+      </a>
     ) : (
       <button className="w-full py-3 rounded-lg bg-muted text-muted-foreground text-sm font-medium cursor-not-allowed" disabled>
         Em Breve

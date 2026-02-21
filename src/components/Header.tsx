@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
+const whatsappLink = `https://wa.me/5521974977175?text=${encodeURIComponent("Olá! Gostaria de solicitar um orçamento para criação de site com a Patronix.")}`;
+
 const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Serviços", href: "#beneficios" },
@@ -62,9 +64,9 @@ const Header = () => {
               {link.label}
             </button>
           ))}
-          <button onClick={() => scrollTo("#contato")} className="neon-btn text-sm !px-6 !py-2.5">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="neon-btn text-sm !px-6 !py-2.5 inline-block">
             Solicitar Orçamento
-          </button>
+          </a>
         </nav>
 
         {/* Mobile toggle */}
@@ -87,9 +89,9 @@ const Header = () => {
               {link.label}
             </button>
           ))}
-          <button onClick={() => scrollTo("#contato")} className="neon-btn text-sm !px-6 !py-2.5 mt-3 w-full">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="neon-btn text-sm !px-6 !py-2.5 mt-3 w-full inline-block text-center">
             Solicitar Orçamento
-          </button>
+          </a>
         </nav>
       )}
     </header>
