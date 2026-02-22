@@ -1,4 +1,4 @@
-import { Mail, MessageCircle } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 
 const FooterSection = () => (
   <footer id="contato" className="relative pt-24 pb-8">
@@ -45,7 +45,7 @@ const FooterSection = () => (
               </a>
             </li>
             <li className="flex items-center gap-3 text-sm text-muted-foreground">
-              <Mail className="w-4 h-4 text-primary" />
+              <Instagram className="w-4 h-4 text-primary" />
               <a href="https://instagram.com/cyberpatronix" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 @cyberpatronix
               </a>
