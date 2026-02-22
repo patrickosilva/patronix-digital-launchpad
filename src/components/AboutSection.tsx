@@ -64,10 +64,10 @@ const AboutSection = () => (
           {/* Stats grid */}
           <div className="grid grid-cols-2 gap-4">
             {[
-              { value: "100+", label: "Projetos Entregues" },
+              { value: "100%", label: "Dedicação ao Cliente" },
               { value: "98%", label: "Satisfação dos Clientes" },
               { value: "24h", label: "Suporte Rápido" },
-              { value: "5+", label: "Anos de Experiência" },
+              { value: "∞", label: "Compromisso com Qualidade" },
             ].map((stat, i) => (
               <div key={stat.label} className="glass-card-hover p-6 text-center">
                 <p className="font-display text-3xl font-bold neon-text mb-1">{stat.value}</p>

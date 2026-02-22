@@ -1,4 +1,4 @@
-import { Mail, Phone, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 const FooterSection = () => (
   <footer id="contato" className="relative pt-24 pb-8">
@@ -40,15 +40,15 @@ const FooterSection = () => (
           <ul className="space-y-3">
             <li className="flex items-center gap-3 text-sm text-muted-foreground">
               <MessageCircle className="w-4 h-4 text-primary" />
-              <span>WhatsApp: (00) 00000-0000</span>
+              <a href="https://wa.me/5521974977175" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                WhatsApp: (21) 97497-7175
+              </a>
             </li>
             <li className="flex items-center gap-3 text-sm text-muted-foreground">
               <Mail className="w-4 h-4 text-primary" />
-              <span>contato@patronix.com.br</span>
-            </li>
-            <li className="flex items-center gap-3 text-sm text-muted-foreground">
-              <Phone className="w-4 h-4 text-primary" />
-              <span>(00) 0000-0000</span>
+              <a href="https://instagram.com/cyberpatronix" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                @cyberpatronix
+              </a>
             </li>
           </ul>
         </div>
@@ -61,15 +61,14 @@ const FooterSection = () => (
           © {new Date().getFullYear()} Patronix. Todos os direitos reservados.
         </p>
         <div className="flex items-center gap-4">
-          {["Instagram", "LinkedIn", "GitHub"].map((social) => (
-            <a
-              key={social}
-              href="#"
-              className="text-xs text-muted-foreground hover:text-primary transition-colors"
-            >
-              {social}
-            </a>
-          ))}
+          <a
+            href="https://instagram.com/cyberpatronix"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-muted-foreground hover:text-primary transition-colors"
+          >
+            Instagram
+          </a>
         </div>
       </div>
     </div>
