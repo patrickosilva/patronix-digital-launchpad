@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logoImage from "@/assets/patronix-logo.jfif";
 
 const whatsappLink = `https://wa.me/5521974977175?text=${encodeURIComponent("Olá! Gostaria de solicitar um orçamento para criação de site com a Patronix.")}`;
 
@@ -45,8 +46,9 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#inicio" onClick={() => scrollTo("#inicio")} className="font-display text-2xl font-bold neon-text">
-          PATRONIX
+        <a href="#inicio" onClick={() => scrollTo("#inicio")} className="flex items-center gap-2">
+          <img src={logoImage} alt="Patronix" className="h-8 w-auto rounded" />
+          <span className="font-display text-2xl font-bold neon-text">PATRONIX</span>
         </a>
 
         {/* Desktop nav */}

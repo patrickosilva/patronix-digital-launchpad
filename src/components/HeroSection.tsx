@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import logoImage from "@/assets/patronix-logo.jfif";
+import heroImage from "@/assets/hero-tech.jpg";
 
 const HeroSection = () => {
   const scrollToPlans = () => {
@@ -57,10 +57,11 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative flex items-center justify-center"
+            className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden neon-border p-8 bg-card/30">
-              <img src={logoImage} alt="Patronix Logo" className="w-full max-w-md h-auto rounded-2xl mx-auto" />
+            <div className="relative rounded-2xl overflow-hidden neon-border">
+              <img src={heroImage} alt="Patronix - Tecnologia Digital" className="w-full h-auto rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
           </motion.div>
         </div>
