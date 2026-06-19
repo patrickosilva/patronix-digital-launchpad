@@ -1,49 +1,50 @@
 import { motion } from "framer-motion";
-import { Shield, Zap, Smartphone, Headphones, Palette, BarChart3 } from "lucide-react";
+import { Code2, Globe, Workflow, BrainCircuit, ShieldCheck, Lightbulb } from "lucide-react";
 
-const benefits = [
-  { icon: Palette, title: "Design Estratégico", desc: "Layouts pensados para converter visitantes em clientes com identidade visual única." },
-  { icon: Zap, title: "Performance", desc: "Sites rápidos e otimizados que carregam em milissegundos e ranqueiam no Google." },
-  { icon: Shield, title: "Segurança", desc: "Certificado SSL, proteção contra invasões e infraestrutura segura." },
-  { icon: Headphones, title: "Suporte Dedicado", desc: "Acompanhamento próximo durante e após a entrega do seu projeto." },
-  { icon: Smartphone, title: "Responsividade", desc: "Experiência perfeita em qualquer dispositivo: desktop, tablet ou mobile." },
-  { icon: BarChart3, title: "Profissionalismo", desc: "Código limpo, boas práticas e estrutura preparada para crescer." },
+const services = [
+  { icon: Code2, title: "Desenvolvimento de Sistemas", desc: "Sistemas sob medida, robustos e escaláveis para a operação da sua empresa." },
+  { icon: Globe, title: "Desenvolvimento Web", desc: "Sites institucionais, landing pages e plataformas modernas com alta performance." },
+  { icon: Workflow, title: "Automação de Processos", desc: "Reduza tarefas manuais e ganhe produtividade com fluxos automatizados sob medida." },
+  { icon: BrainCircuit, title: "Inteligência Artificial", desc: "Soluções de IA aplicadas para análise, atendimento e tomada de decisão." },
+  { icon: ShieldCheck, title: "Cibersegurança", desc: "Proteção contínua de dados, sistemas e infraestrutura digital da sua empresa." },
+  { icon: Lightbulb, title: "Consultoria Tecnológica", desc: "Estratégia digital orientada a resultados, eficiência e transformação tecnológica." },
 ];
 
 const BenefitsSection = () => (
-  <section id="beneficios" className="relative py-24">
-    <div className="section-divider mb-24" />
+  <section id="servicos" className="relative py-28">
     <div className="container mx-auto px-6">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        className="max-w-2xl mb-16"
       >
-        <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
-          Por que escolher a <span className="neon-text">Patronix</span>?
+        <p className="text-sm font-medium text-primary mb-3 tracking-wider uppercase">Nossos Serviços</p>
+        <h2 className="font-display text-3xl sm:text-5xl font-bold mb-5">
+          Soluções tecnológicas <span className="purple-text">de ponta a ponta</span>
         </h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          Combinamos tecnologia de ponta com estratégia digital para entregar resultados reais.
+        <p className="text-muted-foreground text-lg leading-relaxed">
+          Combinamos engenharia de software, segurança e inteligência artificial para entregar resultados
+          mensuráveis para a sua empresa.
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {benefits.map((b, i) => (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {services.map((s, i) => (
           <motion.div
-            key={b.title}
+            key={s.title}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
+            transition={{ duration: 0.5, delay: i * 0.08 }}
             className="glass-card-hover p-8 group"
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-              <b.icon className="w-6 h-6 text-primary" />
+            <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mb-6 group-hover:bg-primary/25 transition-colors">
+              <s.icon className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-display text-lg font-semibold mb-2">{b.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+            <h3 className="font-display text-xl font-semibold mb-3">{s.title}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
           </motion.div>
         ))}
       </div>
