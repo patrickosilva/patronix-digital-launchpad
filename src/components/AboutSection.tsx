@@ -20,15 +20,15 @@ const AboutSection = () => (
         >
           <p className="text-sm font-medium text-primary mb-3 tracking-wider uppercase">Sobre a Patronix</p>
           <h2 className="font-display text-3xl sm:text-5xl font-bold mb-6 leading-tight">
-            Tecnologia com <span className="purple-text">propósito</span> e <span className="purple-text">segurança</span>.
+            Tecnologia sem segurança gera <span className="purple-text">riscos</span>. Segurança sem inovação limita o <span className="purple-text">crescimento</span>.
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-5 text-lg">
-            A Patronix é uma empresa de tecnologia focada em entregar soluções modernas, seguras e
-            escaláveis para negócios que buscam crescer com inteligência.
+            Por isso, unimos desenvolvimento de software e cibersegurança para criar soluções modernas,
+            eficientes e protegidas desde a origem.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Atuamos em engenharia de software, cibersegurança, automação de processos e transformação
-            digital, conectando estratégia, tecnologia e resultado em cada projeto.
+            Atendemos empresas que precisam crescer com confiança — entregando sistemas, sites, automações
+            e proteção digital de forma integrada, técnica e orientada a resultado.
           </p>
         </motion.div>
 
