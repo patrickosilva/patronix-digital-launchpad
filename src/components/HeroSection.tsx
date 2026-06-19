@@ -26,7 +26,7 @@ const HeroSection = () => (
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full premium-border mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-          <span className="text-xs font-medium text-foreground/80 tracking-wide">Tecnologia • Segurança • Inovação</span>
+          <span className="text-xs font-medium text-foreground/80 tracking-wide">Desenvolvimento • Cibersegurança</span>
         </motion.div>
 
         <motion.h1
@@ -35,9 +35,7 @@ const HeroSection = () => (
           transition={{ duration: 0.7, delay: 0.1 }}
           className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] mb-6"
         >
-          Tecnologia, Segurança e{" "}
-          <span className="purple-text">Inovação</span>{" "}
-          para o seu negócio.
+          Tecnologia e <span className="purple-text">Cibersegurança</span> para empresas que querem crescer com segurança.
         </motion.h1>
 
         <motion.p
@@ -46,8 +44,8 @@ const HeroSection = () => (
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed"
         >
-          Desenvolvemos sistemas, automações e soluções digitais seguras para empresas que desejam crescer
-          com eficiência, escalabilidade e confiança.
+          Desenvolvemos sistemas, sites, automações e soluções de cibersegurança para empresas que buscam
+          inovação, eficiência e proteção digital.
         </motion.p>
 
         <motion.div
@@ -56,12 +54,12 @@ const HeroSection = () => (
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="btn-primary">
+          <button onClick={() => scrollTo("contato")} className="btn-primary">
             Solicitar Orçamento <ArrowRight size={18} />
-          </a>
-          <button onClick={() => scrollTo("servicos")} className="btn-outline">
-            Conhecer Serviços
           </button>
+          <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="btn-outline">
+            Falar no WhatsApp
+          </a>
         </motion.div>
       </div>
     </div>
