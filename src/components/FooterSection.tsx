@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, Mail } from "lucide-react";
+import { Instagram, MessageCircle, Mail, Globe } from "lucide-react";
 import logo from "@/assets/patronix-logo.png";
 
 const FooterSection = () => (
