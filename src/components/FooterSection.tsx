@@ -11,10 +11,13 @@ const FooterSection = () => (
             <span className="font-display text-xl font-bold brand-text">PATRONIX</span>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mb-4">
-            Desenvolvimento • Segurança • Automação • Soluções
+            Desenvolvimento de Software • Cibersegurança • Automação
           </p>
-          <p className="text-xs text-muted-foreground max-w-sm leading-relaxed">
+          <p className="text-xs text-muted-foreground max-w-sm leading-relaxed mb-4">
             Empresa de tecnologia especializada em soluções digitais seguras, escaláveis e inteligentes.
+          </p>
+          <p className="font-display text-sm text-foreground/90 max-w-sm leading-relaxed italic">
+            "Desenvolvemos soluções. Protegemos operações. Impulsionamos resultados."
           </p>
         </div>
 
