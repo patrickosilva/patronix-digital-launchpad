@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { ShieldCheck, TrendingUp, Zap, Sparkles, LifeBuoy } from "lucide-react";
+import { ShieldCheck, Zap, Target, Handshake } from "lucide-react";
 
 const pillars = [
-  { icon: ShieldCheck, title: "Segurança", desc: "Proteção em todas as camadas, do código à infraestrutura." },
-  { icon: TrendingUp, title: "Escalabilidade", desc: "Arquiteturas preparadas para crescer junto com o seu negócio." },
-  { icon: Zap, title: "Performance", desc: "Sistemas rápidos, otimizados e prontos para alta demanda." },
-  { icon: Sparkles, title: "Inovação", desc: "Aplicação de IA, automação e tecnologias modernas." },
-  { icon: LifeBuoy, title: "Suporte", desc: "Acompanhamento próximo, técnico e orientado a resultados." },
+  { icon: ShieldCheck, title: "Segurança em Primeiro Lugar", desc: "Cada projeto é construído com proteção integrada desde a origem." },
+  { icon: Zap, title: "Performance e Eficiência", desc: "Sistemas rápidos, otimizados e prontos para escalar com a sua operação." },
+  { icon: Target, title: "Soluções Sob Medida", desc: "Nada genérico. Tudo desenhado para o seu contexto e seus objetivos." },
+  { icon: Handshake, title: "Atendimento Especializado", desc: "Contato direto com a equipe técnica, sem intermediários." },
 ];
 
 const PlansSection = () => (
@@ -21,16 +20,16 @@ const PlansSection = () => (
         transition={{ duration: 0.6 }}
         className="text-center max-w-2xl mx-auto mb-16"
       >
-        <p className="text-sm font-medium text-primary mb-3 tracking-wider uppercase">Por que Patronix</p>
+        <p className="text-sm font-medium text-primary mb-3 tracking-wider uppercase">Diferenciais</p>
         <h2 className="font-display text-3xl sm:text-5xl font-bold mb-5">
-          Construído sobre <span className="purple-text">pilares sólidos</span>
+          Por que escolher a <span className="purple-text">Patronix</span>
         </h2>
         <p className="text-muted-foreground text-lg">
-          Cada projeto entregue pela Patronix carrega os mesmos princípios que definem nossa marca.
+          Quatro princípios que orientam cada projeto que entregamos.
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {pillars.map((p, i) => (
           <motion.div
             key={p.title}
@@ -38,9 +37,9 @@ const PlansSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.08 }}
-            className="glass-card-hover p-6 text-center"
+            className="glass-card-hover p-6"
           >
-            <div className="w-12 h-12 mx-auto rounded-xl bg-primary/15 flex items-center justify-center mb-4">
+            <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mb-5">
               <p.icon className="w-6 h-6 text-primary" />
             </div>
             <h3 className="font-display text-base font-semibold mb-2">{p.title}</h3>
@@ -48,6 +47,16 @@ const PlansSection = () => (
           </motion.div>
         ))}
       </div>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mt-20 text-center font-display text-xl sm:text-2xl font-medium text-foreground/90 max-w-3xl mx-auto"
+      >
+        Desenvolvemos soluções. <span className="purple-text">Protegemos operações.</span> Impulsionamos resultados.
+      </motion.p>
     </div>
   </section>
 );
