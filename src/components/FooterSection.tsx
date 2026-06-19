@@ -61,6 +61,11 @@ const FooterSection = () => (
                 <Instagram className="w-4 h-4" /> @cyberpatronix
               </a>
             </li>
+            <li>
+              <a href="https://cyberpatronix.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Globe className="w-4 h-4" /> cyberpatronix.com
+              </a>
+            </li>
           </ul>
         </div>
       </div>
