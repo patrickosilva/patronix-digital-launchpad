@@ -6,50 +6,53 @@
 
 @layer base {
   :root {
-    --background: 220 20% 4%;
-    --foreground: 210 20% 93%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 20% 7%;
-    --card-foreground: 210 20% 93%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 20% 7%;
-    --popover-foreground: 210 20% 93%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 100% 50%;
+    --primary: 268 100% 59%;
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 271 91% 65%;
 
-    --secondary: 160 70% 45%;
+    --secondary: 271 91% 65%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 13%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 0 0% 11%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 160 70% 45%;
+    --accent: 268 100% 59%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 16%;
-    --input: 220 15% 16%;
-    --ring: 210 100% 50%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 268 100% 59%;
 
     --radius: 0.75rem;
 
-    --neon-glow: 210 100% 50%;
-    --neon-green: 160 70% 45%;
-    --neon-gradient: linear-gradient(135deg, hsl(210 100% 50%), hsl(160 70% 45%));
-    --surface-glass: 220 20% 9%;
-    --surface-glass-border: 220 15% 20%;
+    --gradient-primary: linear-gradient(135deg, hsl(268 100% 59%), hsl(271 91% 65%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 6%));
+    --shadow-elegant: 0 20px 60px -20px hsl(268 100% 59% / 0.35);
+    --shadow-glow: 0 0 60px hsl(271 91% 65% / 0.25);
 
-    --sidebar-background: 220 20% 4%;
-    --sidebar-foreground: 210 20% 93%;
-    --sidebar-primary: 210 100% 50%;
+    --surface-glass: 0 0% 8%;
+    --surface-glass-border: 0 0% 16%;
+
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 268 100% 59%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 15% 13%;
-    --sidebar-accent-foreground: 210 20% 93%;
-    --sidebar-border: 220 15% 16%;
-    --sidebar-ring: 210 100% 50%;
+    --sidebar-accent: 0 0% 11%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 268 100% 59%;
   }
 }
 
@@ -59,112 +62,98 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
   }
 
   ::selection {
-    background: hsl(210 100% 50% / 0.3);
+    background: hsl(268 100% 59% / 0.35);
     color: hsl(0 0% 100%);
   }
 
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: hsl(220 20% 4%);
-  }
-  ::-webkit-scrollbar-thumb {
-    background: hsl(220 15% 20%);
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: hsl(210 100% 50% / 0.5);
-  }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: hsl(0 0% 4%); }
+  ::-webkit-scrollbar-thumb { background: hsl(0 0% 18%); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: hsl(268 100% 59% / 0.6); }
 }
 
 @layer utilities {
   .glass-card {
-    @apply bg-card/50 backdrop-blur-xl border border-border rounded-xl;
+    @apply bg-card/60 backdrop-blur-xl border border-border rounded-2xl;
   }
 
   .glass-card-hover {
     @apply glass-card transition-all duration-500;
   }
-
   .glass-card-hover:hover {
-    border-color: hsl(210 100% 50% / 0.4);
-    box-shadow: 0 0 30px hsl(210 100% 50% / 0.1), 0 0 60px hsl(160 70% 45% / 0.05);
+    border-color: hsl(268 100% 59% / 0.5);
+    box-shadow: 0 10px 40px -10px hsl(268 100% 59% / 0.25);
     transform: translateY(-4px);
   }
 
-  .neon-text {
-    background: linear-gradient(135deg, hsl(210 100% 50%), hsl(160 70% 45%));
+  .brand-text {
+    background: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(271 91% 75%) 60%, hsl(268 100% 59%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .neon-border {
+  .purple-text {
+    background: linear-gradient(135deg, hsl(271 91% 75%), hsl(268 100% 59%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .premium-border {
     border: 1px solid transparent;
-    background-image: linear-gradient(hsl(220 20% 7%), hsl(220 20% 7%)),
-                      linear-gradient(135deg, hsl(210 100% 50%), hsl(160 70% 45%));
+    background-image: linear-gradient(hsl(0 0% 6%), hsl(0 0% 6%)),
+                      linear-gradient(135deg, hsl(268 100% 59% / 0.6), hsl(271 91% 65% / 0.2));
     background-origin: border-box;
     background-clip: padding-box, border-box;
   }
 
-  .neon-glow {
-    box-shadow: 0 0 20px hsl(210 100% 50% / 0.3), 0 0 40px hsl(160 70% 45% / 0.15);
-  }
-
-  .neon-btn {
-    @apply relative overflow-hidden font-semibold px-8 py-4 rounded-lg transition-all duration-300;
-    background: linear-gradient(135deg, hsl(210 100% 50%), hsl(160 70% 45%));
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 font-semibold px-7 py-3.5 rounded-xl transition-all duration-300;
+    background: linear-gradient(135deg, hsl(268 100% 59%), hsl(271 91% 65%));
     color: hsl(0 0% 100%);
+    box-shadow: 0 10px 30px -10px hsl(268 100% 59% / 0.5);
   }
-
-  .neon-btn:hover {
-    box-shadow: 0 0 30px hsl(210 100% 50% / 0.5), 0 0 60px hsl(160 70% 45% / 0.3);
+  .btn-primary:hover {
+    box-shadow: 0 14px 40px -8px hsl(268 100% 59% / 0.7);
     transform: translateY(-2px);
   }
 
-  .neon-btn-outline {
-    @apply relative font-semibold px-8 py-4 rounded-lg transition-all duration-300;
-    border: 1px solid hsl(210 100% 50% / 0.5);
-    color: hsl(210 100% 50%);
-    background: transparent;
+  .btn-outline {
+    @apply relative inline-flex items-center justify-center gap-2 font-semibold px-7 py-3.5 rounded-xl transition-all duration-300;
+    border: 1px solid hsl(0 0% 22%);
+    color: hsl(0 0% 98%);
+    background: hsl(0 0% 7% / 0.6);
+    backdrop-filter: blur(8px);
   }
-
-  .neon-btn-outline:hover {
-    background: hsl(210 100% 50% / 0.1);
-    border-color: hsl(210 100% 50%);
-    box-shadow: 0 0 20px hsl(210 100% 50% / 0.2);
+  .btn-outline:hover {
+    border-color: hsl(268 100% 59%);
+    background: hsl(268 100% 59% / 0.08);
   }
 
   .grid-bg {
     background-image:
-      linear-gradient(hsl(220 15% 16% / 0.3) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(220 15% 16% / 0.3) 1px, transparent 1px);
+      linear-gradient(hsl(0 0% 14% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 14% / 0.5) 1px, transparent 1px);
     background-size: 60px 60px;
-  }
-
-  .plan-featured {
-    @apply relative;
-    border: 1px solid hsl(210 100% 50% / 0.5);
-    box-shadow: 0 0 40px hsl(210 100% 50% / 0.15), 0 0 80px hsl(160 70% 45% / 0.08);
-  }
-
-  .plan-locked {
-    @apply relative opacity-60;
-    filter: grayscale(0.3);
   }
 
   .section-divider {
     @apply w-full h-px;
-    background: linear-gradient(90deg, transparent, hsl(210 100% 50% / 0.3), hsl(160 70% 45% / 0.3), transparent);
+    background: linear-gradient(90deg, transparent, hsl(268 100% 59% / 0.4), transparent);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 60px hsl(268 100% 59% / 0.4);
   }
 }

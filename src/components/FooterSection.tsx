@@ -1,75 +1,75 @@
-import { Instagram, MessageCircle } from "lucide-react";
+import { Instagram, MessageCircle, Mail } from "lucide-react";
+import logo from "@/assets/patronix-logo.png";
 
 const FooterSection = () => (
-  <footer id="contato" className="relative pt-24 pb-8">
-    <div className="section-divider mb-16" />
+  <footer className="relative pt-20 pb-8 border-t border-border">
     <div className="container mx-auto px-6">
-      <div className="grid md:grid-cols-3 gap-12 mb-16">
-        {/* Brand */}
-        <div>
-          <h3 className="font-display text-2xl font-bold neon-text mb-4">PATRONIX</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Transformando negócios através de soluções digitais inteligentes, seguras e de alto impacto.
+      <div className="grid md:grid-cols-4 gap-12 mb-12">
+        <div className="md:col-span-2">
+          <div className="flex items-center gap-3 mb-4">
+            <img src={logo} alt="Patronix" className="w-9 h-9 object-contain" />
+            <span className="font-display text-xl font-bold brand-text">PATRONIX</span>
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mb-4">
+            Desenvolvimento • Segurança • Automação • Soluções
+          </p>
+          <p className="text-xs text-muted-foreground max-w-sm leading-relaxed">
+            Empresa de tecnologia especializada em soluções digitais seguras, escaláveis e inteligentes.
           </p>
         </div>
 
-        {/* Links */}
         <div>
-          <h4 className="font-display font-semibold mb-4">Navegação</h4>
-          <ul className="space-y-2">
-            {["Início", "Serviços", "Planos", "Sobre"].map((item) => (
-              <li key={item}>
+          <h4 className="font-display font-semibold mb-4 text-sm">Navegação</h4>
+          <ul className="space-y-2.5">
+            {[
+              { l: "Início", id: "inicio" },
+              { l: "Serviços", id: "servicos" },
+              { l: "Soluções", id: "solucoes" },
+              { l: "Sobre", id: "sobre" },
+              { l: "Contato", id: "contato" },
+            ].map((i) => (
+              <li key={i.id}>
                 <button
-                  onClick={() =>
-                    document
-                      .getElementById(item === "Serviços" ? "beneficios" : item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""))
-                      ?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onClick={() => document.getElementById(i.id)?.scrollIntoView({ behavior: "smooth" })}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  {item}
+                  {i.l}
                 </button>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Contact */}
         <div>
-          <h4 className="font-display font-semibold mb-4">Contato</h4>
+          <h4 className="font-display font-semibold mb-4 text-sm">Contato</h4>
           <ul className="space-y-3">
-            <li className="flex items-center gap-3 text-sm text-muted-foreground">
-              <MessageCircle className="w-4 h-4 text-primary" />
-              <a href="https://wa.me/5521974977175" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                WhatsApp: (21) 97497-7175
+            <li>
+              <a href="https://wa.me/5521920086201" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <MessageCircle className="w-4 h-4" /> (21) 92008-6201
               </a>
             </li>
-            <li className="flex items-center gap-3 text-sm text-muted-foreground">
-              <Instagram className="w-4 h-4 text-primary" />
-              <a href="https://instagram.com/cyberpatronix" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                @cyberpatronix
+            <li>
+              <a href="mailto:cyberpatronix@gmail.com" className="flex items-center gap-2.5 text-sm text-muted-foreground hover:text-primary transition-colors break-all">
+                <Mail className="w-4 h-4 shrink-0" /> cyberpatronix@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/cyberpatronix" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Instagram className="w-4 h-4" /> @cyberpatronix
               </a>
             </li>
           </ul>
         </div>
       </div>
 
-      {/* Bottom */}
       <div className="section-divider mb-6" />
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Patronix. Todos os direitos reservados.
         </p>
-        <div className="flex items-center gap-4">
-          <a
-            href="https://instagram.com/cyberpatronix"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-muted-foreground hover:text-primary transition-colors"
-          >
-            Instagram
-          </a>
-        </div>
+        <p className="text-xs text-muted-foreground">
+          Tecnologia • Segurança • Inovação
+        </p>
       </div>
     </div>
   </footer>
