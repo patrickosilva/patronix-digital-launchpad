@@ -5,7 +5,7 @@ const pillars = [
   { icon: ShieldCheck, title: "Segurança em Primeiro Lugar", desc: "Cada projeto é construído com proteção integrada desde a origem." },
   { icon: Zap, title: "Performance e Eficiência", desc: "Sistemas rápidos, otimizados e prontos para escalar com a sua operação." },
   { icon: Target, title: "Soluções Sob Medida", desc: "Nada genérico. Tudo desenhado para o seu contexto e seus objetivos." },
-  { icon: Handshake, title: "Atendimento Especializado", desc: "Contato direto com a equipe técnica, sem intermediários." },
+  { icon: Handshake, title: "Atendimento Dedicado", desc: "Um profissional responsável acompanha sua demanda do início ao fim, garantindo comunicação clara, agilidade e um atendimento mais próximo." },
 ];
 
 const PlansSection = () => (

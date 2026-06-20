@@ -74,7 +74,7 @@ const Header = () => {
       </div>
 
       {isOpen && (
-        <nav className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border px-6 pb-6 pt-2">
+        <nav className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border px-6 pb-6 pt-4">
           {navLinks.map((link) => (
             <button
               key={link.href}
@@ -86,7 +86,7 @@ const Header = () => {
               {link.label}
             </button>
           ))}
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-primary text-sm mt-3 w-full">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs mt-5 w-full !py-2.5">
             Solicitar Orçamento
           </a>
         </nav>
