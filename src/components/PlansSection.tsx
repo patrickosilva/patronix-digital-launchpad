@@ -29,7 +29,7 @@ const PlansSection = () => (
         </p>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
         {pillars.map((p, i) => (
           <motion.div
             key={p.title}
@@ -37,13 +37,13 @@ const PlansSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.08 }}
-            className="glass-card-hover p-6"
+            className="glass-card-hover p-6 h-full flex flex-col"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center mb-5">
               <p.icon className="w-6 h-6 text-primary" />
             </div>
             <h3 className="font-display text-base font-semibold mb-2">{p.title}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
+            <p className="text-xs text-muted-foreground leading-relaxed flex-grow">{p.desc}</p>
           </motion.div>
         ))}
       </div>

@@ -86,7 +86,7 @@ const Header = () => {
               {link.label}
             </button>
           ))}
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs mt-5 w-full !py-2.5">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn-primary text-xs mt-5 w-full !py-2 !px-4">
             Solicitar Orçamento
           </a>
         </nav>
